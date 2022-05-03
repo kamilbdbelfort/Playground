@@ -1,0 +1,1 @@
+My name is Kamil, OP programmer in making!He learned how to use fs.appendFileSync()... wooow!

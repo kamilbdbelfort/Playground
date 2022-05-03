@@ -1,0 +1,27 @@
+import { render } from "react-dom";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
+// import your route components too
+
+export default function App() {
+  return <p>App</p>;
+}
+
+render(
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<App />}>
+        {/*<Route index element={<Home />} />*/}
+        {/*<Route path="teams" element={<Teams />}>*/}
+        {/*  <Route path=":teamId" element={<Team />} />*/}
+        {/*  <Route path="new" element={<NewTeamForm />} />*/}
+        {/*  <Route index element={<LeagueStandings />} />*/}
+        {/*</Route>*/}
+      </Route>
+    </Routes>
+  </BrowserRouter>,
+  document.getElementById("root")
+);
