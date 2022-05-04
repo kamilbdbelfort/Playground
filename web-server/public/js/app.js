@@ -1,5 +1,3 @@
-console.log('File is loaded');
-
 const weatherForm = document.querySelector('form');
 const search = document.querySelector('input');
 const messageOne = document.querySelector('#message-1');
@@ -10,8 +8,10 @@ const messageTwo = document.querySelector('#message-2');
 messageTwo.textContent = '';
 
 weatherForm.addEventListener('submit', (e) => {
-  messageTwo.textContent = 'Loading Message';
   e.preventDefault();
+
+  messageTwo.textContent = 'Loading Message';
+
   fetch(`http://localhost:3000/weather?address=${search.value}`).then((response) => {
     response.json().then((data) => {
       if(data.error){
